@@ -32,20 +32,6 @@ def check_db_variables():
         print("Erro: As seguintes variáveis de ambiente não estão definidas (verifique seu arquivo .env ou o ambiente do sistema):")
         for var in missing_vars:
             print(f"- {var}")
-        print("\nPor favor, defina essas variáveis em um arquivo .env na raiz do seu projeto.")
-        print("Exemplo de conteúdo para o arquivo .env (localizado em c:\\repos\\projeto-final-engenharia-dados\\.env):")
-        print('AZURE_SQL_SERVER_NAME="seu_servidor.database.windows.net"')
-        print('AZURE_SQL_DATABASE_NAME="seu_banco_de_dados"')
-        print('AZURE_SQL_ADMIN_USER="seu_usuario_admin"')
-        print('AZURE_SQL_ADMIN_PASSWORD="sua_senha_segura"')
-        print(f'{DDL_FILE_ENV_KEY}="SQL/ER-ddl.sql"  # Caminho do arquivo DDL, relativo à raiz do projeto')
-        
-        print("\nAlternativamente, exemplo para definir no PowerShell (para a sessão atual):")
-        print('$env:AZURE_SQL_SERVER_NAME="seu_servidor.database.windows.net"')
-        print('$env:AZURE_SQL_DATABASE_NAME="seu_banco_de_dados"')
-        print('$env:AZURE_SQL_ADMIN_USER="seu_usuario_admin"')
-        print('$env:AZURE_SQL_ADMIN_PASSWORD="sua_senha_segura"')
-        print(f'$env:{DDL_FILE_ENV_KEY}="SQL/ER-ddl.sql"')
         return False
     return True
 
