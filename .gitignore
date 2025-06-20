@@ -49,3 +49,6 @@ VENV/
 
 # Editor & IDE specific
 .vscode/
+
+#MKDocs
+site/

@@ -1,0 +1,75 @@
+site_name: Pipeline de Dados - Fórmula 1
+site_description: Documentação do projeto de Engenharia de Dados com dados da Fórmula 1
+site_author: Ana, Iuri, Julia, Lucas e William
+site_url: https://iurilimamarques.github.io/projeto-final-engenharia-dados
+# site_favicon: images/favicon.png
+# site_logo: images/logo.png
+
+repo_name: projeto-final-engenharia-dados
+repo_url: https://github.com/iurilimamarques/projeto-final-engenharia-dados
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+nav:
+  - Home: index.md
+  - Configuração do Ambiente: configuracao-ambiente.md
+  - Visão Geral do Projeto: visao-geral.md
+  - Modelo ER: modelo-ER.md
+  - Pipeline de Dados:
+      - Camada Bronze: pipeline/bronze.md
+      - Camada Silver: pipeline/silver.md
+      - Camada Gold: pipeline/gold.md
+  - Modelo Dimensional: modelo-dimensional.md
+  - Conclusão: conclusao.md
+
+theme:
+  name: material
+  palette:
+    # Modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+
+    # Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  language: pt
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - navigation.next-prev
+    - search
+  icon:
+    repo: fontawesome/brands/github
+
+copyright: >
+  Copyright &copy; 2024 - <a href="#" target="_blank"><b>Pipeline de Dados - Fórmula 1</b></a>
+
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
