@@ -8,7 +8,7 @@ Repositório do projeto final da disciplina de Engenharia de Dados do curso de E
 
 ## Desenho de Arquitetura
 
-![Arquitetura do Projeto](images/arquitetura.png)
+![Arquitetura do Projeto](docs/images/arquitetura.png)
 
 ---
 
