@@ -3,9 +3,11 @@ hide:
   - navigation
 ---
 
-# Visão Geral
+# Arquitetura
 
 Esta seção descreve o passo a passo completo da pipeline de forma geral.
+
+![Arquitetura do Projeto](images/arquitetura.png)
 
 
 ## 1. Preparação dos Dados
