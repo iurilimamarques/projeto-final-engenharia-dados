@@ -7,7 +7,7 @@ hide:
 
 ## Estrutura do Modelo
 
-Adotamos a **modelagem em estrela (star schema)**, com tabelas de fatos ligadas a suas respectivas dimensões. A modelagem foi realizada com base nos dados da camada **Gold**, processados e organizados no Databricks.
+A modelagem foi realizada com base nos dados da camada **Gold**, processados e organizados no Databricks.
 
 ---
 
