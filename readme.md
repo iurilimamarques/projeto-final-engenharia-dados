@@ -18,28 +18,49 @@ Repositório do projeto final da disciplina de Engenharia de Dados do curso de E
 - **Azure Data Lake**: Armazenamento em nuvem das camadas de dados
 - **Databricks + PySpark**: Processamento e transformação dos dados
 - **Delta Lake**: Controle de versionamento e transações ACID
-- **Terraform**: Provisionamento da infraestrutura em nuvem
+- **Terraform**: Provisionamento da infraestrutura em nuvem (incluindo banco SQL e Data Lake)
 - **MkDocs + Material**: Documentação do projeto
 
 ---
 
 ## Como Executar
 
-Esse projeto roda majoritariamente em ambiente de nuvem (Azure + Databricks). Para reprodução local:
+O projeto roda majoritariamente em ambiente de nuvem (Azure + Databricks). Para reprodução do ambiente e execução da pipeline, siga o passo a passo abaixo:
 
-- Clonar o repositório do projeto:  
-   ```bash
-   git clone https://github.com/iurilimamarques/projeto-final-engenharia-dados.git```
-- Instanciar o banco de dados SQL Server .
-- Executar os [scripts](/SQL/) de criação e inserção de tabelas.
-- Criar a conta de armazenamento no Azure e configurar o Data Lake.
-- Criar uma conta e provisionar o cluster do Databricks.
-- Usar Terraform para automatizar a criação de recursos.
-- Integrar o Databricks com o Azure Data Lake.
-- Executar a pipeline de dados conforme scripts.
+### 1. Clonar o repositório do projeto:
+```bash
+git clone https://github.com/iurilimamarques/projeto-final-engenharia-dados.git
+```
+
+### 2. Provisionar a infraestrutura via Terraform
+
+O Terraform deste projeto já contempla a criação dos principais recursos, incluindo a instância do banco de dados SQL Server e a conta de armazenamento do Data Lake.  
+No diretório onde estão os arquivos do Terraform, execute:
+```bash
+terraform init
+terraform validate
+terraform fmt
+terraform plan
+terraform apply
+```
+
+### 3. Executar os scripts de criação e inserção de tabelas
+
+Após a criação da infraestrutura, localize os scripts SQL na pasta [`SQL/`](SQL/) e execute-os na instância do SQL Server provisionada para criar as tabelas e inserir os dados necessários.
+
+### 4. Provisionar um cluster do Databricks
+
+Crie uma conta no Databricks e provisione um cluster no workspace associado à sua assinatura Azure.
+
+### 5. Integrar o Databricks com o Azure Data Lake
+
+Realize a integração entre o Databricks e o Azure Data Lake, garantindo que o cluster Databricks tenha permissão de acesso ao armazenamento criado.
+
+### 6. Executar a pipeline de dados
+
+Executar a pipeline de dados conforme scripts.
 
 ---
-
 
 ## Autores
 
